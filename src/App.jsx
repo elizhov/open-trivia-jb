@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Categories from "./components/Categories";
 import fetchData from "./api/api";
 import CategoryChart from "./components/CategoryChart.jsx";
+import DifficultyChart from "./components/DifficultyChart.jsx";
 
 function App() {
   const [questions, setQuestions] = useState([]);
@@ -41,6 +42,10 @@ function App() {
         <CategoryChart
             questions={questions}
             selectedCategory={selectedCategory}
+        />
+        <DifficultyChart
+        questions={questions}
+        selectedCategory={selectedCategory}
         />
       </div>
   );

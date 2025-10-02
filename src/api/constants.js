@@ -1,3 +1,4 @@
-export const API_URL = "https://opentdb.com/api.php?amount=40"
+export const API_URL = "https://opentdb.com/api.php?amount=100"
 
-// raw url: "https://opentdb.com/api.php"
+// default encoding url: "https://opentdb.com/api.php"
+// legacy url encoding url: "https://opentdb.com/api.php?amount=10&encode=url3986"

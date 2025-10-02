@@ -4,7 +4,12 @@ const fetchData = async () => {
     try {
         const response = await fetch(API_URL);
         const data = await response.json();
-        return data.results || []; // always return an array
+
+        // categories url convert
+        return (data.results || []).map(q => ({
+            ...q,
+            category: q.category.replace(/&amp;/g, "&"),
+        }));
     } catch (error) {
         return { error: error.message };
     }

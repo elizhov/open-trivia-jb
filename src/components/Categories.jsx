@@ -1,25 +1,33 @@
-// Categories.jsx
-const Categories = ({ questions, onSelectCategory }) => {
-    // Extract unique categories from the questions prop
-    const uniqueCategories = [...new Set(questions.map(q => q.category))];
+import { Button, Flex } from "antd";
+ import "../styles/Categories.css";
+
+const Categories = ({ questions, onSelectCategory, selectedCategory }) => {
+    const uniqueCategories = [...new Set(questions.map((q) => q.category))];
 
     return (
-        <div>
-            <h3>Categories</h3>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                {/* "All" button */}
-                <button onClick={() => onSelectCategory(null)}>All</button>
+        <div className="categories-container">
+            <h3 className="categories-title">Categories</h3>
+            <Flex wrap="wrap" gap="small" className="categories-list">
+                <Button
+                    type={selectedCategory === null ? "primary" : "default"}
+                    shape="round"
+                    onClick={() => onSelectCategory(null)}
+
+                >
+                    All
+                </Button>
 
                 {uniqueCategories.map((cat) => (
-                    <button
+                    <Button
                         key={cat}
+                        type={selectedCategory === cat ? "primary" : "default"}
+                        shape="round"
                         onClick={() => onSelectCategory(cat)}
-                        style={{ padding: "5px 10px", cursor: "pointer" }}
                     >
                         {cat}
-                    </button>
+                    </Button>
                 ))}
-            </div>
+            </Flex>
         </div>
     );
 };

@@ -16,9 +16,36 @@
 
 /* Main app container */
 .app-container {
-  /*max-width: 1400px;*/
+  max-width: 1400px;
   margin: 0 auto;
   padding: 40px 24px;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1440px) {
+  .app-container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app-container {
+    max-width: 100%;
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 20px 12px;
+  }
 }
 
 /* Header section */

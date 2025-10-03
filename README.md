@@ -6,3 +6,5 @@ Question Distribution: Visualize the number of questions per category and diffic
 Filtering: Filter the data to focus on a single category.
 # Tech Stack
 React, Recharts, Ant Design
+# Project Link
+https://open-trivia-jb.web.app

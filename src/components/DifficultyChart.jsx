@@ -35,7 +35,7 @@ const DifficultyChart = ({ questions, selectedCategory }) => {
     return (
         <div className="difficulty-chart-container">
             <ResponsiveContainer>
-                <PieChart margin={{top: 20, right: 45, bottom: 20, left: 60}}>
+                <PieChart margin={{top: 20, right: 45, bottom: 20, left: 70}}>
                     <Pie
                         data={data}
                         dataKey="value"

@@ -5,6 +5,8 @@ import fetchData from "./api/api";
 import CategoryChart from "./components/CategoryChart.jsx";
 import DifficultyChart from "./components/DifficultyChart.jsx";
 import "./App.css";
+import Footer from "./components/Footer.jsx";
+
 
 function App() {
     const [questions, setQuestions] = useState([]);
@@ -31,6 +33,11 @@ function App() {
         getQuestions();
     }, []);
 
+
+    useEffect(() => {
+        console.log("Fetched questions:", questions);
+    }, [questions]);
+
     if (loading) {
         return (
             <div className="loading-container">
@@ -49,6 +56,7 @@ function App() {
     }
 
     return (
+        <div className="app-wrapper">
         <div className="app-container">
             <header className="app-header">
                 <h1 className="app-title">Trivia Dashboard</h1>
@@ -91,8 +99,8 @@ function App() {
                                 Difficulty Breakdown
                                 {selectedCategory && (
                                     <span className="card-subtitle">
-                    for {selectedCategory}
-                  </span>
+                                        for {selectedCategory}
+                                    </span>
                                 )}
                             </div>
                         }
@@ -105,6 +113,9 @@ function App() {
                     </Card>
                 </Col>
             </Row>
+
+        </div>
+            <Footer/>
         </div>
     );
 }

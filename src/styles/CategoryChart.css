@@ -1,15 +1,12 @@
-/* Chart container */
 .category-chart-container {
     width: 100%;
 }
 
-/* Remove focus outline from chart */
 .category-chart-container .recharts-wrapper,
 .category-chart-container .recharts-surface {
     outline: none !important;
 }
 
-/* Style the default Recharts tooltip */
 .category-chart-container .recharts-tooltip-wrapper {
     outline: none;
 }

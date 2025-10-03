@@ -35,12 +35,13 @@ const DifficultyChart = ({ questions, selectedCategory }) => {
     return (
         <div className="difficulty-chart-container">
             <ResponsiveContainer>
-                <PieChart margin={{top: 20, right: 20, bottom: 20, left: 45}}>
+                <PieChart margin={{top: 20, right: 45, bottom: 20, left: 45}}>
                     <Pie
                         data={data}
                         dataKey="value"
                         nameKey="name"
-                        outerRadius={100}
+                        outerRadius="80%"
+                        fontSize={13}
                         label={({ name, percent }) =>
                             `${name} ${(percent * 100).toFixed(0)}%`
                         }

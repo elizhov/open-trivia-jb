@@ -34,10 +34,6 @@ function App() {
     }, []);
 
 
-    useEffect(() => {
-        console.log("Fetched questions:", questions);
-    }, [questions]);
-
     if (loading) {
         return (
             <div className="loading-container">

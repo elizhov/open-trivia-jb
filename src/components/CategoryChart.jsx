@@ -8,6 +8,7 @@ import {
     ResponsiveContainer,
     Cell,
 } from "recharts";
+import "../styles/CategoryChart.css";
 
 const getCategoryCounts = (questions) => {
     const counts = {};
@@ -24,13 +25,12 @@ const CategoryChart = ({ questions, selectedCategory }) => {
     const data = getCategoryCounts(questions);
 
     return (
-        <div style={{ width: "100%" }}>
+        <div className="category-chart-container">
             <ResponsiveContainer width="100%" height={Math.max(400, data.length * 60)}>
                 <BarChart
                     layout="vertical"
                     data={data}
                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-
                 >
                     <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
                     <XAxis
@@ -38,7 +38,6 @@ const CategoryChart = ({ questions, selectedCategory }) => {
                         tick={{ fill: "#666", fontSize: 12 }}
                         tickCount={10}
                         axisLine={{ stroke: "#e0e0e0" }}
-
                     />
                     <YAxis
                         dataKey="category"
@@ -50,30 +49,7 @@ const CategoryChart = ({ questions, selectedCategory }) => {
                     <Tooltip
                         cursor={{ fill: "rgba(123,108,246,0.08)" }}
                         separator=": "
-                        wrapperStyle={{
-                            borderRadius: "12px",
-                            overflow: "hidden",
-                            boxShadow: "0 4px 16px rgba(0,0,0,0.15)"
-                        }}
-                        contentStyle={{
-                            backgroundColor: "#fff",
-                            border: "none",
-                            borderRadius: "12px",
-                            padding: "12px 16px",
-                            fontFamily: "sans-serif"
-                        }}
-                        labelStyle={{
-                            fontWeight: 600,
-                            marginBottom: "6px",
-                            color: "#7b6cf6",
-                            fontSize: "14px"
-                        }}
-                        itemStyle={{
-                            color: "#555",
-                            fontSize: "13px"
-                        }}
                     />
-
                     <Bar
                         dataKey="count"
                         radius={[0, 8, 8, 0]}

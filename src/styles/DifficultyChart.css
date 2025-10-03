@@ -55,3 +55,8 @@
     color: #555 !important;
     font-size: 13px !important;
 }
+
+.difficulty-chart-container .recharts-wrapper,
+.difficulty-chart-container .recharts-surface {
+    outline: none !important;
+}

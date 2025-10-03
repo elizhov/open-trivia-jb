@@ -6,7 +6,7 @@
 }
 
 .app-container {
-  max-width: min(1400px, 95vw); /* Never wider than 1400px OR 95% of viewport */
+  max-width: min(1400px, 95vw);
   margin: 0 auto;
   padding: clamp(20px, 5vw, 40px) clamp(12px, 3vw, 24px);
 }
@@ -34,17 +34,14 @@
   font-weight: 400;
 }
 
-/* Filters section */
 .filters-section {
   margin-bottom: 32px;
 }
 
-/* Charts section */
 .charts-section {
   margin-top: 32px;
 }
 
-/* Chart cards */
 .chart-card {
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -79,10 +76,6 @@
   flex-direction: column;
 }
 
-/*.title-icon {*/
-/*  font-size: 24px;*/
-/*}*/
-
 .card-subtitle {
   display: block;
   font-size: 13px;
@@ -92,7 +85,6 @@
   font-style: italic;
 }
 
-/* Loading and error states */
 .loading-container,
 .error-container {
   display: flex;
@@ -105,6 +97,10 @@
 
 .error-container .ant-alert {
   max-width: 500px;
+}
+
+.recharts-wrapper {
+  outline: none !important;
 }
 
 /* Responsive adjustments */

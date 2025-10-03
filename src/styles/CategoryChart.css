@@ -1,0 +1,35 @@
+/* Chart container */
+.category-chart-container {
+    width: 100%;
+}
+
+/* Remove focus outline from chart */
+.category-chart-container .recharts-wrapper,
+.category-chart-container .recharts-surface {
+    outline: none !important;
+}
+
+/* Style the default Recharts tooltip */
+.category-chart-container .recharts-tooltip-wrapper {
+    outline: none;
+}
+
+.category-chart-container .recharts-default-tooltip {
+    background-color: #fff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+    padding: 12px 16px !important;
+}
+
+.category-chart-container .recharts-tooltip-label {
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #7b6cf6 !important;
+    margin-bottom: 6px !important;
+}
+
+.category-chart-container .recharts-tooltip-item {
+    color: #555 !important;
+    font-size: 13px !important;
+}
